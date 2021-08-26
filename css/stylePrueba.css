@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 2rem;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background-image: url(../imagenes/fondo2.jpg);
+
+}
+
+header{
+	background-image: url(../img/header-moon.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center top;
+	/*height: 80vh;*/
+}
+
+nav{
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	position: sticky;
+	top: 0;
+
+}
+
+nav ul{
+	float: right; 
+}
+	nav ul li{
+		display: inline-block;
+		list-style: none;
+	}
+
+		nav ul li a{
+			color: white;
+			font-size: 2rem;
+			text-decoration: none;
+			margin-left: 26px;
+		}
+
+		/*nav ul li a:hover{
+			background-color: grey;
+		}
+*/
+		a.active{
+			text-decoration: underline;
+		}
+
+
+h1{ 
+	font-size: 8rem;
+	text-transform: uppercase;
+	color: white; 
+	position: relative;
+	left: 400px;
+	width: 800px;
+	font-family: 'Julee', cursive;
+}
+h5{
+	color: blue;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+}
+
+h3{
+	font-family: 'Julee', cursive;
+}
+
+h4{
+	color: white;
+    font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-size: 3rem;
+	position: relative;
+/*	top: -80px;*/
+	left: 340px;
+	width: 300px;
+}
+
+article h1{
+	font-family: 'Roboto', sans-serif;
+	font-size:2rem;
+	left: 140px;
+}
+
+.paraDiv{
+	color: white;
+	position: relative;
+	left: 330px;
+	font-size: 3rem;
+	width: 300px;
+	font-family: 'Roboto Condensed', sans-serif;
+	top: -30px;
+}
+
+
+footer{
+	color: white;
+	padding: 30px;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: -14px;
+}
+
+footer img{
+	position: fixed;
+	bottom: 5px;
+	right: 30px;
+}
+
+/* cajas */
+.caja1{
+	width: 100%;
+	height: 300px;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.caja2{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	border-style: double;
+	border-color: black;
+}
+
+.caja3{
+	color: white;
+	padding: 20px;
+	background-color: black;
+	clear: both;
+	margin-top: 30px;
+}
+
+
+#num{
+	padding: 5px 20px;
+	text-align: center;
+}
+/* contenedores */
+.container{
+			padding: 15px;
+			border:solid 1px black;
+			background-image: url(../imagenes/fondo2.jpg);
+			display: flex;
+		}
+
+.box{
+			padding: 20px;
+			text-align: center;
+			color: white;
+			font-size: 3em;
+			font-family: 'Roboto Condensed', sans-serif; 
+		}
+
+/* colores de fondo */
+
+.bg-red{
+			background-color: red;
+		}
+
+		.bg-grey{
+			background-color: grey;
+		}
+
+		.bg-yellow{
+			background-color: yellow;
+		}
+
+		.bg-green{
+			background-color: green;
+		}
+
+		.bg-blue{
+			background-color: blue;
+		}
+
+/* clases para width */
+		.w-25{
+			width: 33.3%;
+		}
+
+		.w-50{
+			width: 50%;
+		}
+
+		.w-75{
+			width: 75%;
+		}	
+
+		.h-25{
+			height: 75%;
+		}
+
+
+ 
+ /*definimos como grid*/
+.grid{
+	width: 100%;
+	display: grid;
+}
+
+/*definimos como queremos las filas y columnas  */
+.grid-main-aside{
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 70vh;
+	grid-column-gap: 20px;
+		
+	}
+/* definimos las areas */
+
+.areas{
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 30vh 90vh 30vh;
+	grid-template-areas: "nav nav nav" "main main aside" "footer footer footer";
+}
+
+/* id's */
+#botonera{
+	grid-area: nav;
+}
+
+#main{
+	grid-area: main;
+}
+
+#aside{
+	grid-area: aside;
+}
+
+#footer{
+	grid-area: footer;
+}
+
+/* responsive*/
+
+@media only screen and (min-width: 480px){
+	.areas{
+	grid-template-columns: 1fr;
+	grid-template-rows: 20vh 60vh 30vh 4vh;
+	grid-template-areas: "nav" "main" "aside" "footer";
+	}
+}
+
+
+@media only screen and (max-width: 790px){
+	.areas{
+		grid-template-columns: 2fr;
+		grid-template-rows: 20vh 60vh 4vh;
+		grid-template-areas: "nav nav" "main aside" "footer footer" ;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.areas{
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 30vh 90vh 30vh;
+	grid-template-areas: "nav nav nav" "main main aside" "footer footer footer";
+}
+}
+
+/* animaciones */
+.animacionBotonera:hover{
+background: linear-gradient(90deg, rgba(73,29,26,0) 0%, rgba(73,29,26,0.14659884029303116) 16%, rgba(76,99,121,1) 90%);
+	color: white;
+	cursor: pointer;
+}
+
+.animacionSubtitulo:hover{background: linear-gradient(90deg, rgba(73,29,26,0) 0%, rgba(73,29,26,0.14659884029303116) 16%, rgba(76,99,121,1) 90%);
+	color: white;
+	transform: skew(-16deg);
+
+}
+
+#menu div img:hover{
+	transform: scale(1.1);
+}
+
+.col-lg-4 figure:hover{
+	position: relative;
+	height: 299px;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0px 10px 25px rgba(0,0,0,0.50);
+}
+
+.col-lg-4 figure img{
+	height: 299px;
+	transition: all 500ms ease-out;
+}
+
+.col-lg-4 figure .capa{
+	position: absolute;
+	top: 0;
+	width: 299px;
+	height: 299px;
+	background: rgb(0,0,0);
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+
+}
+
+.col-lg-4 figure:hover > .capa{
+	opacity: 1;
+	visibility: visible;
+}
