@@ -1,0 +1,25 @@
+nav{
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	position: sticky;
+	top: 0;
+
+}
+
+nav ul{
+	float: right; 
+}
+	nav ul li{
+		display: inline-block;
+		list-style: none;
+	}
+
+		nav ul li a{
+			color: white;
+			font-size: 2rem;
+			text-decoration: none;
+			margin-left: 26px;
+		}
+		a.active{
+			text-decoration: underline;
+		}
