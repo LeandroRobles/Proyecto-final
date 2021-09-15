@@ -36,7 +36,8 @@ h2{
 }
 
 h3{
-	font-family: 'Julee', cursive;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
 }
 
 h4{
@@ -150,6 +151,14 @@ footer{
 	box-sizing: border-box;
 	border-style: double;
 	border-color: black;
+}
+
+.caja6{
+	color: white;
+	padding: 20px;
+	clear: both;
+	margin: 30px;
+	text-align: center;
 }
 
 .animacionBotonera:hover{
